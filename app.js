@@ -1,3 +1,5 @@
+/*-- constants --*/
+
 const projects = [
     {
         title: "Riddles",
@@ -58,3 +60,18 @@ const engineer = {
     inspiration: "As a lifelong Marvel fan, Tony Stark’s creative spirit, problem-solving genius, and gritty attitude have always inspired me. His character sparked my passion for software engineering, where I can channel that same drive to build innovative solutions.", 
     skills : ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'React.js', 'Python', 'MongoDB', 'Mongoose', 'Neon', 'GitHub', 'Communication', 'Teamwork', 'Problem Solving', 'Critical Thinking','Adaptability', 'Time Management', 'Growth Mindset'], 
 };
+
+/*-- variables --*/
+
+let nameElement = document.querySelectorAll("#name");
+
+
+/*-- functions --*/
+
+render(); 
+
+function render() {
+    nameElement.forEach((name) => {
+        name.innerHTML = `${engineer.firstName} ${engineer.lastName}`;
+    });
+}; 
