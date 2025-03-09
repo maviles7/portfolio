@@ -64,6 +64,7 @@ const engineer = {
 /*-- variables --*/
 
 let nameElement = document.querySelectorAll("#name");
+let titleElement = document.querySelectorAll("#title");
 
 
 /*-- functions --*/
@@ -72,6 +73,10 @@ render();
 
 function render() {
     nameElement.forEach((name) => {
-        name.innerHTML = `${engineer.firstName} ${engineer.lastName}`;
+        name.innerText = `${engineer.firstName} ${engineer.lastName}`;
+    });
+    
+    titleElement.forEach((title) => {
+        title.innerText = engineer.title;
     });
 }; 
