@@ -65,6 +65,10 @@ const engineer = {
 
 let nameElement = document.querySelectorAll("#name");
 let titleElement = document.querySelectorAll("#title");
+let bioElement = document.querySelector("#bio");
+let inspirationElement = document.querySelector("#inspiration");
+let skillsElement = document.querySelector("#skills");
+
 
 
 /*-- functions --*/
@@ -74,9 +78,25 @@ render();
 function render() {
     nameElement.forEach((name) => {
         name.innerText = `${engineer.firstName} ${engineer.lastName}`;
-    });
-    
+    })
+
     titleElement.forEach((title) => {
         title.innerText = engineer.title;
-    });
+    })
+    
+    if (bioElement) {
+        bioElement.innerText = engineer.bio;
+    }
+
+    if (inspirationElement) {
+        inspirationElement.innerText = engineer.inspiration;
+    }
+
+    if (skillsElement) {
+        engineer.skills.forEach((skill) => {
+            const li = document.createElement("li");
+            li.innerText = skill;
+            skillsElement.appendChild(li);
+        });
+    }
 }; 
