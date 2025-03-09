@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Miriam</title>
+    <title>Contact Miriam</title>
     <script defer src="../app.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
 </head>
@@ -22,13 +22,21 @@
         <h1 id="name"></h1>
         <h3 id="title"></h3>
         <div>
-            <a href="https://www.linkedin.com/in/miriam-aviles-491312236/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/maviles7" target="_blank">GitHub</a>
-            <a href="../static/MAVILES_resume.pdf" target="_blank">Resume</a>
+            <h2>Contact Miriam</h2>
+            <p>Feel free to contact for inquiries about jobs, work, or projects!</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
         </div>
-        <p id="bio"></p>
-        <p id="inspiration"></p>
-        <ul id="skills"></ul>
     </main>
 </body>
 </html>
